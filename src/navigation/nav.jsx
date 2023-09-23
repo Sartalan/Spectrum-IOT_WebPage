@@ -6,7 +6,7 @@ export function Nav ({topIcon}) {
       <nav className='nav'>
 
         <div className="top-navigation">
-          <img src="../img/top_nav_icon.png" alt="" />
+        <i class="bi bi-three-dots-vertical icono"></i>
         </div>
 
 {

@@ -5,8 +5,13 @@
   background-color:#000;
 }
 
-html, body {
+#root {
   height: 100%;
   width: 100%;
   display: flex;
+
+}
+
+h2 {
+  color: white;
 }

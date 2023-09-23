@@ -1,22 +1,29 @@
 :root {
     /*? Main Box Colors*/
-  --nav_background:rgb(77, 72, 70);
+  --side-bar_background:rgb(77, 72, 70);
 
     /** Rest Colors*/
   --top_text_color:#ffff;
 
     /*TODO: Maßnahmenbeginn*/
-  --nav_width:250px;
+  --side-bar_width:250px;
 
 }
 
-.nav {
-  width: var(--nav_width);
+.side-bar {
+  width: var(--side-bar_width);
   height: 100vh;
-  background-color: var(--nav_background);
+  background-color: var(--side-bar_background);
 }
+
+div i {
+  font-size: 1em;
+  color: white;
+}
+
 
 /*Nav Inside ---------------------*/ 
+
 
 
 
