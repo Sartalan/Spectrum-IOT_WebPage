@@ -34,9 +34,11 @@
 .slider-nav {
   width: 5em;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
   .slider-nav > div {
- 
     width: 100%;
     display: flex;
     background-color: var(--slider-nav_and_top_color);
@@ -64,6 +66,18 @@
     filter: invert(1);
   }
 
+  /* Ul Img => 0 0 0 0*/
+
+  .slider-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: rgb(92, 38, 209);
+    height: 60%;
+  }
+
 /*Nav Inside ---------------------*/ 
 
 .top-navigation  {
@@ -74,6 +88,10 @@
   height: var(--top_height);
   border-bottom: solid 2px rgba(255, 255, 255, 0.135);
 }
+
+/*Box contain only .top-icon %% -iot-text.
+  his function is to contain them for use flex
+*/
 
 .top-navigation > .box {
   display: flex;

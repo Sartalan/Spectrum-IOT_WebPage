@@ -14,21 +14,10 @@ export function Nav () {
         spanText="Internet of Things"
         />    
 
-       <ul className="list">
-
-       </ul>
-
-
-        
       </nav>
-     
     </header>
-    <div className='slider-nav'>
-          <div>
-            <img className='menu-arrow' src={menu} alt="" />
-          </div>
-        </div>
-  
+
+    <Slider/> 
     </>
   )
 }
@@ -45,6 +34,47 @@ export function Top({name,spanText}){
       
   )
 }
+
+export function Slider() {
+    return (
+<>
+    <div className='slider-nav'>
+      <div>
+        <img className='menu-arrow' src={menu} alt="" />
+      </div>
+
+{/* ------------ */}
+
+      <ul className='slider-ul'>
+
+        <SocialList
+          socialLinkLi="#"
+          iconLinkLi="#"
+          altLi="dsawds"
+        />
+
+      </ul>
+    </div>
+
+</> 
+    )
+}
+
+{/*
+
+
+*/}
+export function SocialList({socialLinkLi, iconLinkLi, altLi}) {
+  
+  return (
+      <li className='social-link-list' >
+          <a href={socialLinkLi}>
+              <img src={iconLinkLi} alt={altLi}/>
+          </a>
+      </li>
+   ) 
+}
+
 
 
 
