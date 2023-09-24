@@ -1,19 +1,26 @@
 :root {
     /*? Main Box Colors*/
-  --side-bar_background:rgb(42, 35, 32);
+  --side-bar_background:rgb(0, 0, 0);
+  --slider-nav_and_top_color:rgba(15, 14, 14, 0.244);
 
     /** Rest Colors*/
-  --top_text_color:#ffff;
+  --top_text_color:#1487a1;
+  --top-navigation_h2_color:rgb(255, 255, 255);
 
     /*TODO: Maßnahmenbeginn*/
   --side-bar_width:250px;
+  --top_height:5em;
 
 }
 
 .side-bar {
   width: var(--side-bar_width);
   height: 100vh;
-  background-color: var(--side-bar_background);
+
+}
+
+.side-bar.active {
+   
 }
 
 .nav {
@@ -24,7 +31,70 @@
   background-color: var(--side-bar_background);
 }
 
+.slider-nav {
+  width: 5em;
+  height: 100vh;
+}
+  .slider-nav > div {
+ 
+    width: 100%;
+    display: flex;
+    background-color: var(--slider-nav_and_top_color);
+    justify-content: center;
+    align-items: center;
+    height: var(--top_height);
+    border-bottom: solid 2px rgba(255, 255, 255, 0.135);
+    box-shadow: 0px -3px 3px 0px #236f9b;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .slider-nav > div:hover {
+  
+    background-color: white;
+  }
+
+  /* Icono =>*/
+
+  .slider-nav > div > .menu-arrow {
+    width: 2em;
+  }
+
+  .slider-nav > div:hover .menu-arrow {
+    filter: invert(1);
+  }
+
 /*Nav Inside ---------------------*/ 
+
+.top-navigation  {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color:  var(--slider-nav_and_top_color);
+  height: var(--top_height);
+  border-bottom: solid 2px rgba(255, 255, 255, 0.135);
+}
+
+.top-navigation > .box {
+  display: flex;
+  align-items: end;
+  gap:.25em;
+}
+
+.top-navigation > .box > .top-icon {
+  width: 2em;
+}
+
+.top-navigation > .box > .iot-text {
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  opacity: .6;
+  font-style: italic;
+  user-select: none;
+}
+
+
+/*? --------------------------------*/
 
 
 

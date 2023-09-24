@@ -1,58 +1,64 @@
 import './nav.css'
-import '../img/top_nav_icon.png'
-
+import bar from '../assets/icons/bar.svg'
+import icon from '../assets/icons/nanotechnology.png'
+import menu from '../assets/icons/menu.svg'
 
 export function Nav () {
   return (
+    <>
     <header className='side-bar'>
       <nav className='nav'>
 
-       <Top
-
-       />
-
+       <Top 
+        name="IOT - Project" 
+        spanText="Internet of Things"
+        />    
 
        <ul className="list">
 
        </ul>
 
- 
+
         
       </nav>
+     
     </header>
-  )
-}
-
-export function Top({}){
-  return (
-      <div className="top-navigation">
-        <h2>dsaaw</h2>
-      </div>
-  )
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  /** <div className="middle-navigation-content">
-          
+    <div className='slider-nav'>
+          <div>
+            <img className='menu-arrow' src={menu} alt="" />
           </div>
-          <div className="bottom-navigation">
-          
-          </div> */
+        </div>
+  
+    </>
+  )
 }
-          
+
+export function Top({name,spanText}){
+  return (
+    
+      <div className="top-navigation">
+        <div className="box">
+          <img className='top-icon' src={icon} alt="" />
+          <span className='iot-text'>{spanText}</span>
+        </div>
+      </div>
+      
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
