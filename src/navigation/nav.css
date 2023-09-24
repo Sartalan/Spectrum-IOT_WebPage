@@ -1,6 +1,6 @@
 :root {
     /*? Main Box Colors*/
-  --side-bar_background:rgb(77, 72, 70);
+  --side-bar_background:rgb(42, 35, 32);
 
     /** Rest Colors*/
   --top_text_color:#ffff;
@@ -16,14 +16,15 @@
   background-color: var(--side-bar_background);
 }
 
-div i {
-  font-size: 1em;
-  color: white;
+.nav {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--side-bar_background);
 }
 
-
 /*Nav Inside ---------------------*/ 
-
 
 
 

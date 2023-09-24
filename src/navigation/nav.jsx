@@ -1,32 +1,58 @@
 import './nav.css'
 import '../img/top_nav_icon.png'
-export function Nav ({topIcon}) {
+
+
+export function Nav () {
   return (
     <header className='side-bar'>
       <nav className='nav'>
 
-        <div className="top-navigation">
-        <i class="bi bi-three-dots-vertical icono"></i>
-        </div>
+       <Top
 
-{
-  /* !----------------------------- */
-}
-
-        <div className="middle-navigation-content">
-            
-        </div>
-
-{
-  /* !----------------------------- */
-}
-
-        <div className="bottom-navigation">
-
-        </div>
+       />
 
 
+       <ul className="list">
+
+       </ul>
+
+ 
+        
       </nav>
     </header>
   )
 }
+
+export function Top({}){
+  return (
+      <div className="top-navigation">
+        <h2>dsaaw</h2>
+      </div>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  /** <div className="middle-navigation-content">
+          
+          </div>
+          <div className="bottom-navigation">
+          
+          </div> */
+}
+          
+

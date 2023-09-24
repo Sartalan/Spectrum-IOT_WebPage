@@ -1,5 +1,8 @@
+import './haupt.css'
 export function Haupt(){
   return (
-    <h2>dasdaw</h2>
+    <main className='main'>
+     
+    </main>
   )
 }
