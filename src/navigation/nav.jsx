@@ -1,7 +1,12 @@
 import './nav.css'
-import bar from '../assets/icons/bar.svg'
+import './slider-nav.css'
 import icon from '../assets/icons/nanotechnology.png'
 import menu from '../assets/icons/menu.svg'
+import twitterIcon from '../assets/icons/twitter.svg'
+import githubIcon from '../assets/icons/github.svg'
+import instagramIcon from '../assets/icons/instagram.svg'
+import discordIcon from '../assets/icons/discord.svg'
+
 
 export function Nav () {
   return (
@@ -10,7 +15,6 @@ export function Nav () {
       <nav className='nav'>
 
        <Top 
-        name="IOT - Project" 
         spanText="Internet of Things"
         />    
 
@@ -48,11 +52,31 @@ export function Slider() {
       <ul className='slider-ul'>
 
         <SocialList
-          socialLinkLi="#"
-          iconLinkLi="#"
-          altLi="dsawds"
+          socialLinkLi="https://discord.com"  /*a href */
+          iconLinkLi={discordIcon}    /*img src */
+          altLi="dsawds"    /*alt => img */
         />
 
+        <SocialList
+          socialLinkLi="https://twitter.com/?lang=es"  /*a href */
+          iconLinkLi={twitterIcon}    /*img src */
+          altLi="dsawds"    /*alt => img */
+        />
+
+        <SocialList
+          socialLinkLi="https://www.instagram.com"  /*a href */
+          iconLinkLi={instagramIcon}    /*img src */
+          altLi="dsawds"    /*alt => img */
+        />
+
+        
+        <SocialList
+          socialLinkLi="https://github.com"  /*a href */
+          iconLinkLi={githubIcon}    /*img src */
+          altLi="dsawds"    /*alt => img */
+        />
+
+  
       </ul>
     </div>
 
@@ -69,7 +93,7 @@ export function SocialList({socialLinkLi, iconLinkLi, altLi}) {
   return (
       <li className='social-link-list' >
           <a href={socialLinkLi}>
-              <img src={iconLinkLi} alt={altLi}/>
+              <img className='slider-img' src={iconLinkLi} alt={altLi}/>
           </a>
       </li>
    ) 
