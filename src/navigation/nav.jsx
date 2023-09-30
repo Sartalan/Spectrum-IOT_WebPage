@@ -1,3 +1,4 @@
+import {Inside} from './navInsideContent/navInside'
 import './nav.css'
 import './slider-nav.css'
 import icon from '../assets/icons/nanotechnology.png'
@@ -16,7 +17,10 @@ export function Nav () {
 
        <Top 
         spanText="Internet of Things"
-        />    
+        />
+
+        <Inside/>
+            
 
       </nav>
     </header>
@@ -54,26 +58,26 @@ export function Slider() {
         <SocialList
           socialLinkLi="https://discord.com"  /*a href */
           iconLinkLi={discordIcon}    /*img src */
-          altLi="dsawds"    /*alt => img */
+          altLi="Enlace a mi Discord"    /*alt => img */
         />
 
         <SocialList
           socialLinkLi="https://twitter.com/?lang=es"  /*a href */
           iconLinkLi={twitterIcon}    /*img src */
-          altLi="dsawds"    /*alt => img */
+          altLi="Enlace a mi Twitter"    /*alt => img */
         />
 
         <SocialList
           socialLinkLi="https://www.instagram.com"  /*a href */
           iconLinkLi={instagramIcon}    /*img src */
-          altLi="dsawds"    /*alt => img */
+          altLi="Enlace a mi Instagram"    /*alt => img */
         />
 
         
         <SocialList
           socialLinkLi="https://github.com"  /*a href */
           iconLinkLi={githubIcon}    /*img src */
-          altLi="dsawds"    /*alt => img */
+          altLi="Enlace a mi Github"    /*alt => img */
         />
 
   
@@ -84,10 +88,7 @@ export function Slider() {
     )
 }
 
-{/*
 
-
-*/}
 export function SocialList({socialLinkLi, iconLinkLi, altLi}) {
   
   return (

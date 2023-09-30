@@ -1,0 +1,21 @@
+.inside-nav {
+  overflow-y: scroll;
+  background-color: rgb(24, 22, 22);
+}
+
+.inside-nav::-webkit-scrollbar{
+  width: 0.4em;
+  
+  background-color: rgb(0, 0, 0);
+}
+
+.inside-nav::-webkit-scrollbar-track { /*Fondo cosito*/
+  background-color: rgba(48, 46, 57, 0.153);
+  box-shadow:  -3px 3px 0px #5e7a8a
+  
+}
+
+.inside-nav::-webkit-scrollbar-thumb {/*Cosito*/
+  background-color: rgb(101, 150, 163);
+  border-radius: 1em;
+}
