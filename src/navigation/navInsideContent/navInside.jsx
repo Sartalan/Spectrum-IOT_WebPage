@@ -8,38 +8,34 @@
 
 import './navInside.css'
 
-import controlIcon from './src_inside/example_one.svg'
-import controlIcon2 from './src_inside/example_two.svg'
-import controlIcon3 from './src_inside/example_three.svg'
-import controlIcon4 from './src_inside/example_four.svg'
+import controlHome from './src_inside/home.svg'
+import controlConfig from './src_inside/config.svg'
+import controlStatus from './src_inside/status.svg'
+import about from './src_inside/about_us.svg'
+import aboutRobots from './src_inside/about_robots.svg'
 
 export function Inside(){
  return (
     <div className='inside-nav'>
 
       <InsideNavComponent 
-        controllerIconComponent={controlIcon}
+        controllerIconComponent={controlHome}
       />
-        <InsideNavComponent 
-        controllerIconComponent={controlIcon2}
-      />
- 
       <InsideNavComponent 
-        controllerIconComponent={controlIcon3}
-      />
-      
-      <InsideNavComponent 
-        controllerIconComponent={controlIcon4}
+        controllerIconComponent={controlStatus}
       />
         <InsideNavComponent 
-        controllerIconComponent={controlIcon4}
+        controllerIconComponent={about}
       />
-        <InsideNavComponent 
-        controllerIconComponent={controlIcon4}
+          <InsideNavComponent 
+        controllerIconComponent={aboutRobots}
       />
- 
- 
+       <InsideNavComponent 
+        controllerIconComponent={controlConfig}
+      />
+
       
+
       
       
       
