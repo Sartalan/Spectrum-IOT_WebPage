@@ -27,15 +27,40 @@
 
 /*?---------------*/
 
+/*
+.inside-component = father;
+.icon-component   = child;
+
+/*? .inside-component > .icon-component;
+*/
+
 .inside-component {
   background-color: #0f1011;
   width: 90%;
   height: auto;
   border-radius: .5em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all .15s ease;
+}
+
+.inside-component:hover
+{
+  background-color: rgb(255, 255, 255);
+}
+
+.inside-component:hover .icon-component {
+  filter: invert(0);
+ 
 }
 
 
 .icon-component {
-  
   filter: invert(.8);
+  width: 7.5em;
+  height: 7.5em;
+  padding: 1em 0;
 }

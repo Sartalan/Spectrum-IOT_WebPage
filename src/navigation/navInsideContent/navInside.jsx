@@ -8,7 +8,10 @@
 
 import './navInside.css'
 
-import controlIcon from './src_inside/example.svg'
+import controlIcon from './src_inside/example_one.svg'
+import controlIcon2 from './src_inside/example_two.svg'
+import controlIcon3 from './src_inside/example_three.svg'
+import controlIcon4 from './src_inside/example_four.svg'
 
 export function Inside(){
  return (
@@ -18,15 +21,21 @@ export function Inside(){
         controllerIconComponent={controlIcon}
       />
         <InsideNavComponent 
-        controllerIconComponent={controlIcon}
+        controllerIconComponent={controlIcon2}
       />
  
       <InsideNavComponent 
-        controllerIconComponent={controlIcon}
+        controllerIconComponent={controlIcon3}
       />
       
       <InsideNavComponent 
-        controllerIconComponent={controlIcon}
+        controllerIconComponent={controlIcon4}
+      />
+        <InsideNavComponent 
+        controllerIconComponent={controlIcon4}
+      />
+        <InsideNavComponent 
+        controllerIconComponent={controlIcon4}
       />
  
  
