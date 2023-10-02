@@ -32,10 +32,18 @@
 
   .slider-nav > div > .menu-arrow {
     width: 2em;
+    transition: transform .25s ease;
   }
 
   .slider-nav > div:hover .menu-arrow {
     filter: invert(1);
+  }
+
+  /*?useState*/
+
+  .menu-arrow.close {
+    transition: transform .25s ease;
+    transform: rotateY(180deg)
   }
 
 /*?----------------------*/

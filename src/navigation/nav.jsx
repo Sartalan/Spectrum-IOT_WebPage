@@ -1,3 +1,5 @@
+
+import {useState} from 'react'
 import {Inside} from './navInsideContent/navInside'
 import './nav.css'
 import './slider-nav.css'
@@ -44,12 +46,44 @@ export function Top({name,spanText}){
 }
 
 export function Slider() {
+
+  const [open,close] = useState(false)
+
+  const arrowState = open 
+  ? 'menu-arrow close'  
+  : 'menu-arrow '
+
+  const touch = () => {
+    close(!open)
+    
+  }
+
     return (
 <>
+
     <div className='slider-nav'>
-      <div>
-        <img className='menu-arrow' src={menu} alt="" />
+      <div onClick={touch}>
+        <img className={arrowState} src={menu} alt="" />
       </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 {/* ------------ */}
 

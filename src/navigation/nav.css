@@ -16,11 +16,11 @@
 .side-bar {
   width: var(--side-bar_width);
   height: 100vh;
-
 }
 
-.side-bar.active {
-   
+
+.side-bar.active{
+  width: 0;   
 }
 
 .nav {
