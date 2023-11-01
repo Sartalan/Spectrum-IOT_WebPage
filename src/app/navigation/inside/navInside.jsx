@@ -7,6 +7,9 @@
 
 
 import './navInside.css'
+import '../../routes/routes.css'
+
+import {Routes, Route, Link } from 'react-router-dom'
 
 import controlHome from '../../../assets/icons/nav_icons/home.svg'
 import controlConfig from '../../../assets/icons/nav_icons/config.svg'
@@ -16,38 +19,47 @@ import aboutRobots from '../../../assets/icons/nav_icons/about_robots.svg'
 
 export function Inside(){
  return (
+  <>
     <ul className='inside-nav'>
 
       <div className="inside-component">
-          <a href=""> 
-            <img className='icon-component' src={controlHome} alt=""/>
-          </a>
+         <Link to='/raro-page'><img className='icon-component' src={controlHome} alt="#"/></Link>
       </div>
       <div className="inside-component">
-          <a href=""> 
-            <img className='icon-component' src={controlStatus} alt=""/>
-          </a>
-      </div>
-      <div className="inside-component">
-          <a href=""> 
-            <img className='icon-component' src={about} alt=""/>
-          </a>
-      </div>
-      <div className="inside-component">
-          <a href=""> 
-            <img className='icon-component' src={aboutRobots} alt=""/>
-          </a>
+         <Link to='/coso-page'><img className='icon-component' src={controlHome} alt="#"/></Link>
       </div>
       
+      
     </ul>
+
+    </>
  )
 } 
 
+export function Normal () {
+  return (
+    <h1>Soy un titulo </h1>
+  )
+}
+export function Raro () {
+  return (
+    <h1>SOY RARODASDAS</h1>
+  )
+}
+export function Coso () {
+  return (
+    <h1>SOY YO QUE SE</h1>
+  )
+}
 
-
-
-
-//  J => 10 | 
-//  K => 1  |
-//  L => 12 |
-//  F => 14 |
+export function Haupt(){
+    return (
+      <main className='main'>
+        <Routes>
+          <Route path='/' element={<Normal/>}/>
+          <Route path='/raro-page' element={<Raro/>}/>
+          <Route path='/coso-page' element={<Coso/>}/>
+        </Routes>
+      </main>
+    )
+  }
