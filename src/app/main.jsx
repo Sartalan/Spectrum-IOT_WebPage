@@ -1,7 +1,7 @@
-import './index.css'
+import './main.css'
 import ReactDOM from 'react-dom/client'
 import {Nav} from "./navigation/nav"
-import {Haupt} from "./haupt/haupt"
+import {Haupt} from "./routes/haupt"
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
   

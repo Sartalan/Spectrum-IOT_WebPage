@@ -1,20 +1,23 @@
 
 import {useState} from 'react'
-import {Inside} from './navInsideContent/navInside'
+import {Inside} from './inside/navInside'
 import './nav.css'
-import './slider-nav.css'
-import icon from '../assets/icons/nanotechnology.png'
-import menu from '../assets/icons/menu.svg'
-import twitterIcon from '../assets/icons/twitter.svg'
-import githubIcon from '../assets/icons/github.svg'
-import instagramIcon from '../assets/icons/instagram.svg'
-import discordIcon from '../assets/icons/discord.svg'
+
+import icon from '../../assets/icons/top.png'
+import menu from '../../assets/icons/social_icons/menu.svg'
+import twitterIcon from '../../assets/icons/social_icons/twitter.svg'
+import githubIcon from '../../assets/icons/social_icons/github.svg'
+import instagramIcon from '../../assets/icons/social_icons/instagram.svg'
+import discordIcon from '../../assets/icons/social_icons/discord.svg'
+
+
 
 
 export function Nav () {
+
   return (
     <>
-    <header className='side-bar'>
+    <header className="side-bar">
       <nav className='nav'>
 
        <Top 
@@ -41,13 +44,17 @@ export function Top({name,spanText}){
           <span className='iot-text'>{spanText}</span>
         </div>
       </div>
-      
+
   )
 }
 
 export function Slider() {
 
-  const [open,close] = useState(false)
+  const [open,close,navLeft,navRight] = useState(false)
+
+  const sideBarState = navLeft 
+  ? 'side-bar'
+  : 'side-bar left'
 
   const arrowState = open 
   ? 'menu-arrow close'  
@@ -55,34 +62,16 @@ export function Slider() {
 
   const touch = () => {
     close(!open)
-    
+    navLeft(!navRight)
   }
-
     return (
+
 <>
 
-    <div className='slider-nav'>
+    <div className="slider-nav">
       <div onClick={touch}>
         <img className={arrowState} src={menu} alt="" />
       </div>
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 {/* ------------ */}
