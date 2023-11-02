@@ -3,3 +3,25 @@
   background-color: rgb(97, 93, 93);
   transition: all 0.25s ease;
 }
+
+/*? <HOME PAGE/> */
+/*? ------------ */
+
+.contentHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  gap: 1.5em;
+}
+
+.contentHome > .box { /** Four Boxes */
+  margin: .5em;
+  height: 8em;
+  flex-basis: 15em;
+  flex-grow:0;
+  flex-shrink: 1;
+  background-color: rgb(0, 0, 0);
+  border-radius: 1em;
+}

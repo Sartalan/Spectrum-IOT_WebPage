@@ -15,7 +15,9 @@ import controlHome from '../../../assets/icons/nav_icons/home.svg'
 import controlConfig from '../../../assets/icons/nav_icons/config.svg'
 import controlStatus from '../../../assets/icons/nav_icons/status.svg'
 import about from '../../../assets/icons/nav_icons/about_us.svg'
-import aboutRobots from '../../../assets/icons/nav_icons/about_robots.svg'
+import robot from '../../../assets/icons/nav_icons/about_robots.svg'
+
+import {Home} from '../../routes/home'
 
 export function Inside(){
  return (
@@ -23,10 +25,23 @@ export function Inside(){
     <ul className='inside-nav'>
 
       <div className="inside-component">
-         <Link to='/raro-page'><img className='icon-component' src={controlHome} alt="#"/></Link>
+         <Link to='/home-page'><img className='icon-component' src={controlHome} alt="#"/></Link>
       </div>
+
       <div className="inside-component">
-         <Link to='/coso-page'><img className='icon-component' src={controlHome} alt="#"/></Link>
+         <Link to='/status-page'><img className='icon-component' src={controlStatus} alt="#"/></Link>
+      </div>
+
+      <div className="inside-component">
+         <Link to='/about-page'><img className='icon-component' src={about} alt="#"/></Link>
+      </div>
+
+      <div className="inside-component">
+         <Link to='/robot-page'><img className='icon-component' src={robot} alt="#"/></Link>
+      </div>
+
+      <div className="inside-component">
+         <Link to='/config-page'><img className='icon-component' src={controlConfig} alt="#"/></Link>
       </div>
       
       
@@ -38,17 +53,28 @@ export function Inside(){
 
 export function Normal () {
   return (
-    <h1>Soy un titulo </h1>
+    <h1>Soy POR DEFECTO XD </h1>
   )
 }
-export function Raro () {
+
+export function Status () {
   return (
-    <h1>SOY RARODASDAS</h1>
+    <h1>SOY STATUS</h1>
   )
 }
-export function Coso () {
+export function About () {
   return (
-    <h1>SOY YO QUE SE</h1>
+    <h1>SOY ABOUT</h1>
+  )
+}
+export function Robot () {
+  return (
+    <h1>SOY EL ROBOT</h1>
+  )
+}
+export function Config () {
+  return (
+    <h1>SOY LA CONFIGURACIÓN</h1>
   )
 }
 
@@ -57,8 +83,11 @@ export function Haupt(){
       <main className='main'>
         <Routes>
           <Route path='/' element={<Normal/>}/>
-          <Route path='/raro-page' element={<Raro/>}/>
-          <Route path='/coso-page' element={<Coso/>}/>
+          <Route path='/home-page' element={<Home/>}/>
+          <Route path='/status-page' element={<Status/>}/>
+          <Route path='/about-page' element={<About/>}/>
+          <Route path='/robot-page' element={<Robot/>}/>
+          <Route path='/config-page' element={<Config/>}/>
         </Routes>
       </main>
     )
