@@ -13,6 +13,8 @@ import discordIcon from '../../assets/icons/social_icons/discord.svg'
 
 
 
+
+
 export function Nav () {
 
   return (
@@ -50,20 +52,28 @@ export function Top({name,spanText}){
 
 export function Slider() {
 
-  const [open,close,navLeft,navRight] = useState(false)
+  const [open,close,left,right] = useState(false)
+  // const navMoving = document.querySelector(".side-bar");
 
-  const sideBarState = navLeft 
+  const sideState = left 
   ? 'side-bar'
   : 'side-bar left'
 
   const arrowState = open 
   ? 'menu-arrow close'  
-  : 'menu-arrow '
+  : 'menu-arrow'
 
   const touch = () => {
-    close(!open)
-    navLeft(!navRight)
+ 
+  // const navMoving = document.querySelector(".side-bar");
+  close(!open)
   }
+
+
+
+
+
+
     return (
 
 <>

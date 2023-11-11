@@ -10,7 +10,6 @@
 
 .inside-nav::-webkit-scrollbar{
   width: 0.4em;
-  
   background-color: rgb(0, 0, 0);
 }
 

@@ -1,12 +1,12 @@
 import '../navigation/inside/navInside'
-import './routes.css'
+import './routes_styles/home.css'
 
 export function Home () {
     return (
       <div className="contentHome">
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
+        <div className="box roomOne"></div>
+        <div className="box roomTwo"></div>
+        <div className="box roomThree"></div>
       </div>
     )
   }
