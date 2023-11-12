@@ -1,8 +1,11 @@
 import '../navigation/inside/navInside'
 import './routes_styles/home.css'
+import './routes_styles/general-routes-styles.css'
+
 
 export function Home () {
     return (
+    
       <div className="contentHome">
         <div className="box roomOne">
           <p className='text'>Kitchen</p>

@@ -1,4 +1,5 @@
 import './routes_styles/control.css'
+import './routes_styles/general-routes-styles.css'
 import rightArrow from '../../assets/icons/control_icons/right.svg'
 import leftArrow from '../../assets/icons/control_icons/left.svg'
 import upArrow from '../../assets/icons/control_icons/up.svg'
@@ -8,6 +9,7 @@ export function Control () {
     
     return (
         <>
+            <main className="main">
             <div className="control-container">
                 <div className="controller-box">
 
@@ -31,6 +33,7 @@ export function Control () {
 
                 </div>
             </div>
+            </main>
         </>
     )
 

@@ -2,6 +2,7 @@
 import {useState} from 'react'
 import {Inside} from './inside/navInside'
 import './nav.css'
+import '../routes/routes_styles/start-home.css'
 
 import icon from '../../assets/icons/top.png'
 import menu from '../../assets/icons/social_icons/menu.svg'
