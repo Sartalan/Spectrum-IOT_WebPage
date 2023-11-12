@@ -1,21 +1,37 @@
-
-import {useState} from 'react'
+import {Slider} from './slider'
 import {Inside} from './inside/navInside'
+import { useState } from "react"
+import menu from '../../assets/icons/social_icons/menu.svg'
+
+
 import './nav.css'
 import '../routes/routes_styles/start-home.css'
 
 import icon from '../../assets/icons/top.png'
-import menu from '../../assets/icons/social_icons/menu.svg'
-import twitterIcon from '../../assets/icons/social_icons/twitter.svg'
-import githubIcon from '../../assets/icons/social_icons/github.svg'
-import instagramIcon from '../../assets/icons/social_icons/instagram.svg'
-import discordIcon from '../../assets/icons/social_icons/discord.svg'
+
 
 export function Nav () {
 
+  const [left,right] = useState(false)
+  const [open,close] = useState(false)
+
+  const sideState = left 
+   ? 'side-bar'
+   : 'side-bar left'
+ 
+   const arrowState = open 
+   ? 'menu-arrow close'  
+   : 'menu-arrow'
+ 
+   const touch = () => {
+    right(!left)
+    close(!open)
+   }
+
+
   return (
     <>
-    <header className="side-bar">
+    <header className={sideState}>
       <nav className='nav'>
 
        <Top 
@@ -28,7 +44,15 @@ export function Nav () {
       </nav>
     </header>
 
-    <Slider/> 
+    <div className="slider-nav">
+        <div onClick={touch}>
+            <img  className={arrowState} src={menu} alt="" />
+        </div>
+
+        <Slider/> 
+
+    </div>
+
     </>
   )
 }
@@ -46,71 +70,6 @@ export function Top({name,spanText}){
   )
 }
 
-export function Slider() {
-
-  const [open,close,left,right] = useState(false)
-  // const navMoving = document.querySelector(".side-bar");
-
-  const sideState = left 
-  ? 'side-bar'
-  : 'side-bar left'
-
-  const arrowState = open 
-  ? 'menu-arrow close'  
-  : 'menu-arrow'
-
-  const touch = () => {
- 
-  // const navMoving = document.querySelector(".side-bar");
-  close(!open)
-  }
-
-    return (
-
-<>
-
-    <div className="slider-nav">
-      <div onClick={touch}>
-        <img className={arrowState} src={menu} alt="" />
-      </div>
-
-
-{/* ------------ */}
-
-      <ul className='slider-ul'>
-
-        <SocialList
-          socialLinkLi="https://discord.com"  /*a href */
-          iconLinkLi={discordIcon}    /*img src */
-          altLi="Enlace a mi Discord"    /*alt => img */
-        />
-
-        <SocialList
-          socialLinkLi="https://twitter.com/?lang=es"  /*a href */
-          iconLinkLi={twitterIcon}    /*img src */
-          altLi="Enlace a mi Twitter"    /*alt => img */
-        />
-
-        <SocialList
-          socialLinkLi="https://www.instagram.com"  /*a href */
-          iconLinkLi={instagramIcon}    /*img src */
-          altLi="Enlace a mi Instagram"    /*alt => img */
-        />
-
-        
-        <SocialList
-          socialLinkLi="https://github.com"  /*a href */
-          iconLinkLi={githubIcon}    /*img src */
-          altLi="Enlace a mi Github"    /*alt => img */
-        />
-
-  
-      </ul>
-    </div>
-
-</> 
-    )
-}
 
 
 export function SocialList({socialLinkLi, iconLinkLi, altLi}) {

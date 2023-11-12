@@ -6,6 +6,8 @@ import '../navigation/nav'
 
 export function StartHome () {
     return (
+
+      <>
       <div className="loader-content">
         <div className="text-loader-container">
           <p title='A project by...' className='start-home-text'>A project by<span>...</span></p>
@@ -14,5 +16,7 @@ export function StartHome () {
           <p title='Spectrum.' className='spectrum-text'>Spectrum.</p>
         </div>
       </div>
+      </>
+      
     )
   }
