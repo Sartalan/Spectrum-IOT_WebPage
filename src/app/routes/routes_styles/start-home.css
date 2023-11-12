@@ -1,5 +1,6 @@
 /*TODO:  StartHome Component  */
 /*TODO: --------------------  */
+/*? A Project by... //CODE */
 
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
@@ -12,9 +13,10 @@
     height: 100vh;
     background-color: rgb(14, 13, 13); 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: background 5s 4.5s ease 1 forwards;
+    animation: background 6s 7s ease 1 forwards;
 }
 
 @keyframes background {
@@ -48,8 +50,19 @@
     animation: 
         typing 2.5s steps(15),
         cursor .6s step-end 5 alternate,
-        glitch 1s linear infinite;
+        glitch 1s linear infinite,
+        cursorInherithedText 20s 3.45s forwards;
+}
 
+@keyframes cursorInherithedText {
+  from {
+    border-color: transparent;
+  }
+
+  to {
+    border-color: transparent;
+
+  }
 }
 
 @keyframes cursor {
@@ -74,13 +87,16 @@
   }
   
   .start-home-text:before,
-  .start-home-text:after{
+  .start-home-text:after,
+  .spectrum-text:after,
+  .spectrum-text:before{
     content: attr(title);
     position: absolute;
     left: 0;
   }
   
-  .start-home-text:before{
+  .start-home-text:before,
+  .spectrum-text:before{
     animation: glitchTop 1s linear infinite;
     clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
@@ -98,7 +114,8 @@
     }
   }
   
-  .start-home-text:after{
+  .start-home-text:after,
+  .spectrum-text:after{
     animation: glitchBotom 1.5s linear infinite;
     clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
@@ -116,3 +133,46 @@
     }
   }
 
+/*? Spectrum. //CODE */
+
+.spectrum-text {
+  letter-spacing: 2px;
+  font-family: 'Fira Mono';
+  user-select: none;
+  white-space: nowrap;
+  font-style: italic;
+  overflow: hidden;
+  font-size: 4em;
+  color: transparent;
+  text-align: end;
+  margin:0;
+  opacity: .9;
+  border-right: 5px solid rgba(255, 255, 255, 0.9);
+       animation:  glitch 1s linear infinite,
+       typingTwo 2.5s 3.5s steps(9) forwards,
+       cursorTwo .6s 3.5s step-end 5 alternate,
+       cursorInherithed 3.5s;
+}
+
+@keyframes cursorInherithed {
+  from {
+    border-color: transparent;
+  }
+
+  to {
+    border-color: transparent;
+  }
+}
+
+@keyframes cursorTwo {
+
+  50% {border-color: transparent;}
+}
+
+@keyframes typingTwo {
+ from {width: 0;
+color: white;
+}
+ to {width: 100%;
+color: white;}
+}

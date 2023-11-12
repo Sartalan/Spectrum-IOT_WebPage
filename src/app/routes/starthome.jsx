@@ -10,6 +10,9 @@ export function StartHome () {
         <div className="text-loader-container">
           <p title='A project by...' className='start-home-text'>A project by<span>...</span></p>
         </div>
+        <div className="spectrum-loader-content">
+          <p title='Spectrum.' className='spectrum-text'>Spectrum.</p>
+        </div>
       </div>
     )
   }
