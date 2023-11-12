@@ -13,7 +13,7 @@ import controlHome from '../../../assets/icons/nav_icons/home.svg'
 import controlConfig from '../../../assets/icons/nav_icons/config.svg'
 import controlStatus from '../../../assets/icons/nav_icons/status.svg'
 import about from '../../../assets/icons/nav_icons/about_us.svg'
-import robot from '../../../assets/icons/nav_icons/about_robots.svg'
+import robot from '../../../assets/icons/nav_icons/robot.svg'
 import control from '../../../assets/icons/nav_icons/control.svg'
 
 //? Routes Components
@@ -25,27 +25,29 @@ export function Inside(){
  return (
   <>
     <ul className='inside-nav'>
-
   
       <Link className='inside-component' to='/home-page'>
           <img className='icon-component' src={controlHome} alt="#"/>
+      </Link>
+
+      <Link className='inside-component' to='/robot-page'>
+          <img className='icon-component' src={robot} alt="#"/>
+      </Link>
+
+      
+      <Link className='inside-component' to='/control-page'>
+          <img className='icon-component' src={control} alt="#"/>
       </Link>
       
       <Link className='inside-component' to='/status-page'>
           <img className='icon-component' src={controlStatus} alt="#"/>
       </Link>
       
-      <Link className='inside-component' to='/control-page'>
-          <img className='icon-component' src={control} alt="#"/>
-      </Link>
-      
       <Link className='inside-component' to='/about-page'>
           <img className='icon-component' src={about} alt="#"/>
       </Link>
       
-      <Link className='inside-component' to='/robot-page'>
-          <img className='icon-component' src={robot} alt="#"/>
-      </Link>
+    
      
       <Link className='inside-component' to='/config-page'>
           <img className='icon-component' src={controlConfig} alt="#"/>

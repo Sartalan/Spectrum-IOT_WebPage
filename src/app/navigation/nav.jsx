@@ -10,11 +10,6 @@ import githubIcon from '../../assets/icons/social_icons/github.svg'
 import instagramIcon from '../../assets/icons/social_icons/instagram.svg'
 import discordIcon from '../../assets/icons/social_icons/discord.svg'
 
-
-
-
-
-
 export function Nav () {
 
   return (
@@ -68,11 +63,6 @@ export function Slider() {
   // const navMoving = document.querySelector(".side-bar");
   close(!open)
   }
-
-
-
-
-
 
     return (
 

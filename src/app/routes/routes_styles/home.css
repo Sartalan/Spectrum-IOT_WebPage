@@ -1,6 +1,13 @@
 /*TODO: Home Component */
 /*TODO: -------------- */
 
+@font-face {
+  font-family: "LetraFacha";
+  src: url("/src/assets/fonts/butterscotch/Butterscotch.otf"),
+  url("/src/assets/fonts/butterscotch/Butterscotch.ttf");
+  
+}
+
 .main {
     width: 100%;
     background-color: rgb(59, 58, 58);
@@ -27,5 +34,33 @@
     flex-shrink: 1;
     background-color: rgb(0, 0, 0);
     border-radius: 1em;
+    /*? For Text Inside =>*/
+    display: flex;
+    justify-content: start;
+    align-items: end;
   }
+
+  .box > .text {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    opacity: .75;
+    font-family: "LetraFacha";
+    letter-spacing: 2px;
+    user-select: none;
+    margin:0 0 0.25em 7.5%;
+    list-style-type: circle;
+  }
+
+  /** Style Test*/
+
+  .contentHome > .box  {
+    transition: transform 0.15s ease;
+  }
+
+  .contentHome > .box:hover {
+    transform: scale(1.15) translateY(-15px);
+  }
+
+
+  
   
