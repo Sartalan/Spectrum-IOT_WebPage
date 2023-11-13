@@ -15,13 +15,15 @@
 
 .side-bar {
   width: var(--side-bar_width);
+  transition: width .5s ease;
   height: 100vh;
 }
 
 /*! useEffect*/
 
 .side-bar.left{
-  width: 0;   
+  transform: translateX(var-(--side-bar_width));
+  width: 0;
 }
 
 .nav {

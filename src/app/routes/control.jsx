@@ -9,8 +9,15 @@ export function Control () {
     
     return (
         <>
-            <main className="main">
+
+            <div className="side-speed-bar">
+                    <div className="one speed-elements-in">1</div>
+                    <div className="two speed-elements-in">2</div>
+                    <div className="three speed-elements-in">3</div>
+            </div>
+        
             <div className="control-container">
+
                 <div className="controller-box">
 
                     <div className="center"></div>
@@ -33,7 +40,7 @@ export function Control () {
 
                 </div>
             </div>
-            </main>
+        
         </>
     )
 

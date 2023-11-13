@@ -1,13 +1,10 @@
 import {SocialList} from "./nav"
-import menu from '../../assets/icons/social_icons/menu.svg'
 import twitterIcon from '../../assets/icons/social_icons/twitter.svg'
 import githubIcon from '../../assets/icons/social_icons/github.svg'
 import instagramIcon from '../../assets/icons/social_icons/instagram.svg'
 import discordIcon from '../../assets/icons/social_icons/discord.svg'
 
 export function Slider() {
-
-  
    
       return (
   
