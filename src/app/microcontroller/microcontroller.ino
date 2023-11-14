@@ -1,10 +1,21 @@
 #include <WiFi.h>
 #include <WebSocketClient.h>
 
-const char* ssid = "TP-LINK_3C90";
-const char* password = "yBxwCV3AryoFqJ8RHfYU";
+const char* ssid = "Estudiantes";
+const char* password = "educar_2018";
 char path[] = "/";
-char host[] = "192.168.50.104:5000";
+char host[] = "10.0.14.24:5000";
+
+//---------------
+//wifi del colegio
+//Estudiantes
+//educar_2018
+//10.0.14.24
+//---------------
+//Wifi de mi casa
+//TP-LINK_3C90
+//yBxwCV3AryoFqJ8RHfYU
+//ip: 192.168.50.104
   
 WebSocketClient webSocketClient;
 

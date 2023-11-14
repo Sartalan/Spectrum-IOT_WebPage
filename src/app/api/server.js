@@ -1,8 +1,8 @@
 //npm install websocket
-var WebSocketServer = require('websocket').server;
-var http = require('http');
+import { server as WebSocketServer } from 'websocket';
+import { createServer } from 'http';
 
-var server = http.createServer(function(request, response) {
+var server = createServer(function(request, response) {
     console.log((new Date()) + ' Received request for ' + request.url);
     response.writeHead(404);
     response.end();
@@ -11,7 +11,7 @@ server.listen(5000, function() {
     console.log((new Date()) + ' Server is listening on port 5000');
 });
 
-wsServer = new WebSocketServer({
+server = new WebSocketServer({
     httpServer: server,
     // You should not use autoAcceptConnections for production
     // applications, as it defeats all standard cross-origin protection
@@ -26,7 +26,7 @@ function originIsAllowed(origin) {
   return true;
 }
 
-wsServer.on('request', function(request) {
+server.on('request', function(request) {
     console.log(request)
     if (!originIsAllowed(request.origin)) {
       // Make sure we only accept requests from an allowed origin
@@ -39,20 +39,48 @@ wsServer.on('request', function(request) {
     console.log((new Date()) + ' Connection accepted.');
 
     connection.on('message', function(message) {
+
+
         if (message.type === 'utf8') {
+
+            let Mensaje = message.utf8Data
+
+
+           switch (Mensaje) {
+            case 'Kitchen': 
+                console.log(Mensaje)
+                connection.sendUTF("Soy la cocina");
+
+                break;
+
+            case 'Living Room': 
+                console.log(Mensaje)
+                connection.sendUTF("Soy el comedor");
+
+                break;
+            
+            case 'Bedroom': 
+                console.log(Mensaje)
+                connection.sendUTF("Soy la habitación");
+
+                break;
+           }
+        }
+
+      /*   if (message.type === 'utf8') {
             console.log('Received Message: ' + message.utf8Data);
             //connection.sendUTF(message.utf8Data); this resend the reseived message, instead of it i will send a custom message. hello from nodejs
             connection.sendUTF("Soy NODEJS PUTOOOO");
-        }
+        } */
+
         else if (message.type === 'binary') {
             console.log('Received Binary Message of ' + message.binaryData.length + ' bytes');
             connection.sendBytes(message.binaryData);
         }
     });
 
-
-
     connection.on('close', function(reasonCode, description) {
         console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');
     });
 });
+
