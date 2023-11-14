@@ -47,19 +47,24 @@ server.on('request', function(request) {
 
            switch (Mensaje) {
             case 'Kitchen': 
-                console.log("Recibí " + Mensaje)
+            console.log("Recibí " + Mensaje)
+            connection.sendUTF("Kitchen");
                 /* connection.sendUTF("Soy la cocina"); */
 
                 break;
 
             case 'Living Room': 
                 console.log("Recibí " + Mensaje)
+                connection.sendUTF("Living Room");
+
                 /* connection.sendUTF("Soy el comedor"); */
 
                 break;
             
             case 'Bedroom': 
                 console.log("Recibí " + Mensaje)
+                connection.sendUTF("Bedroom");
+
                /*  connection.sendUTF("Soy la habitación"); */
 
                 break;
@@ -82,4 +87,3 @@ server.on('request', function(request) {
         console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');
     });
 });
-
