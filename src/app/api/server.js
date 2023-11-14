@@ -41,37 +41,36 @@ server.on('request', function(request) {
     connection.on('message', function(message) {
 
 
-        if (message.type === 'utf8') {
+           if (message.type === 'utf8') {
 
             let Mensaje = message.utf8Data
 
-
            switch (Mensaje) {
             case 'Kitchen': 
-                console.log(Mensaje)
-                connection.sendUTF("Soy la cocina");
+                console.log("Recibí " + Mensaje)
+                /* connection.sendUTF("Soy la cocina"); */
 
                 break;
 
             case 'Living Room': 
-                console.log(Mensaje)
-                connection.sendUTF("Soy el comedor");
+                console.log("Recibí " + Mensaje)
+                /* connection.sendUTF("Soy el comedor"); */
 
                 break;
             
             case 'Bedroom': 
-                console.log(Mensaje)
-                connection.sendUTF("Soy la habitación");
+                console.log("Recibí " + Mensaje)
+               /*  connection.sendUTF("Soy la habitación"); */
 
                 break;
            }
-        }
+        } 
 
-      /*   if (message.type === 'utf8') {
+       /*  if (message.type === 'utf8') {
             console.log('Received Message: ' + message.utf8Data);
             //connection.sendUTF(message.utf8Data); this resend the reseived message, instead of it i will send a custom message. hello from nodejs
             connection.sendUTF("Soy NODEJS PUTOOOO");
-        } */
+        }  */
 
         else if (message.type === 'binary') {
             console.log('Received Binary Message of ' + message.binaryData.length + ' bytes');

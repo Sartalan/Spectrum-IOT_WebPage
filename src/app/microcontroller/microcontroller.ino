@@ -1,10 +1,12 @@
 #include <WiFi.h>
 #include <WebSocketClient.h>
 
-const char* ssid = "Estudiantes";
-const char* password = "educar_2018";
+
+const char* ssid = "TP-LINK_3C90";
+const char* password = "yBxwCV3AryoFqJ8RHfYU";
 char path[] = "/";
-char host[] = "10.0.14.24:5000";
+char host[] = "192.168.50.105";
+char texto = ' ';
 
 //---------------
 //wifi del colegio
@@ -49,7 +51,7 @@ void setup() {
   
 
   // Connect to the websocket server
-  if (client.connect("192.168.50.104", 5000)) {
+  if (client.connect(host, 5000)) {
     Serial.println("Connected");
   } else {
     Serial.println("Connection failed.");
@@ -76,6 +78,25 @@ void setup() {
 void loop() {
   String data;
 
+   if(Serial.available() != 0){
+    texto = Serial.read();
+    if(texto == '1'){
+      Serial.println("Soy la cocina");
+      webSocketClient.sendData("Kitchen");
+    }
+
+    else if(texto == '2'){
+      Serial.println("Soy el comedor");
+      webSocketClient.sendData("Living Room");
+
+    }
+
+     else if(texto == '3'){
+      Serial.println("Soy la habitación");
+      webSocketClient.sendData("Bedroom");
+    }
+  }
+
   if (client.connected()) {
     
     webSocketClient.getData(data);
@@ -87,6 +108,7 @@ void loop() {
     data = "hello from esp32";
     
     webSocketClient.sendData(data);
+
     
   } else {
     Serial.println("Client disconnected.");
