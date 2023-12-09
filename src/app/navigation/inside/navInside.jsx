@@ -9,12 +9,6 @@ import './navInside.css'
 
 import {Routes, Route, Link } from 'react-router-dom'
 
-import controlHome from '../../../assets/icons/nav_icons/home.svg'
-import controlConfig from '../../../assets/icons/nav_icons/config.svg'
-import controlStatus from '../../../assets/icons/nav_icons/status.svg'
-import about from '../../../assets/icons/nav_icons/about_us.svg'
-import robot from '../../../assets/icons/nav_icons/robot.svg'
-import control from '../../../assets/icons/nav_icons/control.svg'
 
 //? Routes Components
 import {StartHome} from '../../routes/starthome'
@@ -28,30 +22,30 @@ export function Inside(){
     <ul className='inside-nav'>
   
       <Link className='inside-component' to='/home-page'>
-          <img className='icon-component' src={controlHome} alt="#"/>
+          <img className='icon-component' src="/icons/nav_icons/home.svg" alt="#"/>
       </Link>
 
       <Link className='inside-component' to='/robot-page'>
-          <img className='icon-component' src={robot} alt="#"/>
+          <img className='icon-component' src="/icons/nav_icons/robot.svg" alt="#"/>
       </Link>
 
       
       <Link className='inside-component' to='/control-page'>
-          <img className='icon-component' src={control} alt="#"/>
+          <img className='icon-component' src="/icons/nav_icons/control.svg" alt="#"/>
       </Link>
       
       <Link className='inside-component' to='/status-page'>
-          <img className='icon-component' src={controlStatus} alt="#"/>
+          <img className='icon-component' src="/icons/nav_icons/status.svg" alt="#"/>
       </Link>
       
       <Link className='inside-component' to='/about-page'>
-          <img className='icon-component' src={about} alt="#"/>
+          <img className='icon-component' src="/icons/nav_icons/about_us.svg" alt="#"/>
       </Link>
       
     
      
       <Link className='inside-component' to='/config-page'>
-          <img className='icon-component' src={controlConfig} alt="#"/>
+          <img className='icon-component' src="/icons/nav_icons/config.svg" alt="#"/>
       </Link>   
       
     </ul>

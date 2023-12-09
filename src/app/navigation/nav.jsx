@@ -1,13 +1,11 @@
 import {Slider} from './slider'
 import {Inside} from './inside/navInside'
 import { useState } from "react"
-import menu from '../../assets/icons/social_icons/menu.svg'
+
 
 
 import './nav.css'
 import '../routes/routes_styles/start-home.css'
-
-import icon from '../../assets/icons/top.png'
 
 
 export function Nav () {
@@ -46,7 +44,7 @@ export function Nav () {
 
     <div className="slider-nav">
         <div onClick={touch}>
-            <img  className={arrowState} src={menu} alt="" />
+            <img  className={arrowState} src="/icons/social_icons/menu.svg" alt="" />
         </div>
 
         <Slider/> 
@@ -62,7 +60,7 @@ export function Top({name,spanText}){
     
       <div className="top-navigation">
         <div className="box">
-          <img className='top-icon' src={icon} alt="" />
+          <img className='top-icon' src="/top.png" alt="" />
           <span className='iot-text'>{spanText}</span>
         </div>
       </div>

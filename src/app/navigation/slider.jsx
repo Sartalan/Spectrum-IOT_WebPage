@@ -1,8 +1,5 @@
 import {SocialList} from "./nav"
-import twitterIcon from '../../assets/icons/social_icons/twitter.svg'
-import githubIcon from '../../assets/icons/social_icons/github.svg'
-import instagramIcon from '../../assets/icons/social_icons/instagram.svg'
-import discordIcon from '../../assets/icons/social_icons/discord.svg'
+
 
 export function Slider() {
    
@@ -16,26 +13,26 @@ export function Slider() {
   
           <SocialList
             socialLinkLi="https://discord.com"  /*a href */
-            iconLinkLi={discordIcon}    /*img src */
+            iconLinkLi="icons/social_icons/discord.svg"    /*img src */
             altLi="Enlace a mi Discord"    /*alt => img */
           />
   
           <SocialList
             socialLinkLi="https://twitter.com/?lang=es"  /*a href */
-            iconLinkLi={twitterIcon}    /*img src */
+            iconLinkLi="icons/social_icons/twitter.svg"   /*img src */
             altLi="Enlace a mi Twitter"    /*alt => img */
           />
   
           <SocialList
             socialLinkLi="https://www.instagram.com"  /*a href */
-            iconLinkLi={instagramIcon}    /*img src */
+            iconLinkLi="icons/social_icons/instagram.svg"    /*img src */
             altLi="Enlace a mi Instagram"    /*alt => img */
           />
   
           
           <SocialList
             socialLinkLi="https://github.com"  /*a href */
-            iconLinkLi={githubIcon}    /*img src */
+            iconLinkLi="icons/social_icons/github.svg"     /*img src */
             altLi="Enlace a mi Github"    /*alt => img */
           />
   

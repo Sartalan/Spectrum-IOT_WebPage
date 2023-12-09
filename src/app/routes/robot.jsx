@@ -1,19 +1,19 @@
 import './routes_styles/general-routes-styles.css'
 import './routes_styles/robot.css'
-import robot from '../../assets/icons/nav_icons/robot.svg'
+
 
 
 export function Robot(){
   return(
     <div className="banner-container">
       <Banner
-        bannerIcon={robot}
+        bannerIcon="/icons/nav_icons/home.svg"
         bannerAlt="Name"
         robotName="Aldo"
       />
 
       <Banner
-        bannerIcon={robot}
+        bannerIcon="/icons/nav_icons/home.svg"
         bannerAlt="Name"
         robotName="Jamón"
       />
