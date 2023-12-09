@@ -1,6 +1,5 @@
-import './routes_styles/start-home.css'
-import '../navigation/inside/navInside'
-import './routes_styles/general-routes-styles.css'
+import '../../assets/styles/routes_styles/start.home.css'
+import '../../assets/styles/routes_styles/general.routes.styles.css'
 import '../navigation/nav'
 
 

@@ -5,16 +5,17 @@
   */
 }
 
-import './navInside.css'
+import '../../assets/styles/navInside.css';
+
 
 import {Routes, Route, Link } from 'react-router-dom'
 
 
 //? Routes Components
-import {StartHome} from '../../routes/starthome'
-import {Home} from '../../routes/home'
-import {Control} from '../../routes/control'
-import {Robot} from '../../routes/robot'
+import {StartHome} from '../routes/starthome'
+import {Home} from '../routes/home'
+import {Control} from '../routes/control'
+import {Robot} from '../routes/robot'
 
 export function Inside(){
  return (

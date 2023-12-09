@@ -1,5 +1,6 @@
-import './routes_styles/general-routes-styles.css'
-import './routes_styles/robot.css'
+import '../../assets/styles/routes_styles/general.routes.styles.css'
+import '../../assets/styles/routes_styles/robot.css'
+
 
 
 

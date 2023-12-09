@@ -1,6 +1,8 @@
-import '../navigation/inside/navInside'
-import './routes_styles/home.css'
-import './routes_styles/general-routes-styles.css'
+
+import '../../assets/styles/routes_styles/home.css'
+
+import '../../assets/styles/routes_styles/general.routes.styles.css'
+
 import React, { useEffect, useState } from 'react';
 
 

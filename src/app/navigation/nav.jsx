@@ -1,11 +1,10 @@
 import {Slider} from './slider'
-import {Inside} from './inside/navInside'
+import {Inside} from './navInside'
 import { useState } from "react"
 
 
 
-import './nav.css'
-import '../routes/routes_styles/start-home.css'
+import '../../assets/styles/nav.css';
 
 
 export function Nav () {
