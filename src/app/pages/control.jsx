@@ -1,5 +1,4 @@
 import '../../assets/styles/routes_styles/control.css'
-
 import '../../assets/styles/routes_styles/general.routes.styles.css'
 
 export function Control () {

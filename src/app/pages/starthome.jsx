@@ -1,7 +1,5 @@
 import '../../assets/styles/routes_styles/start.home.css'
 import '../../assets/styles/routes_styles/general.routes.styles.css'
-import '../navigation/nav'
-
 
 export function StartHome () {
     return (

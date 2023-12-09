@@ -8,13 +8,13 @@ export function Robot(){
   return(
     <div className="banner-container">
       <Banner
-        bannerIcon="/icons/nav_icons/home.svg"
+        bannerIcon="/icons/nav_icons/robot.svg"
         bannerAlt="Name"
         robotName="Aldo"
       />
 
       <Banner
-        bannerIcon="/icons/nav_icons/home.svg"
+        bannerIcon="/icons/nav_icons/robot.svg"
         bannerAlt="Name"
         robotName="Jamón"
       />

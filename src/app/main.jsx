@@ -1,8 +1,8 @@
 import './main.css'
 import ReactDOM from 'react-dom/client'
 import {BrowserRouter} from 'react-router-dom'
-import {Nav} from "./navigation/nav"
-import {Haupt} from './navigation/navInside'
+import {Nav} from "./nav/nav"
+import {Haupt} from './nav/navInside'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
   

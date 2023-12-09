@@ -12,10 +12,10 @@ import {Routes, Route, Link } from 'react-router-dom'
 
 
 //? Routes Components
-import {StartHome} from '../routes/starthome'
-import {Home} from '../routes/home'
-import {Control} from '../routes/control'
-import {Robot} from '../routes/robot'
+import {StartHome} from '../pages/starthome'
+import {Home} from '../pages/home'
+import {Control} from '../pages/control'
+import {Robot} from '../pages/robot'
 
 export function Inside(){
  return (

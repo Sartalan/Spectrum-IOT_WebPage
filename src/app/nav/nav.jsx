@@ -54,7 +54,7 @@ export function Nav () {
   )
 }
 
-export function Top({name,spanText}){
+export function Top({spanText}){
   return (
     
       <div className="top-navigation">
@@ -73,7 +73,7 @@ export function SocialList({socialLinkLi, iconLinkLi, altLi}) {
   
   return (
       <li className='social-link-list' >
-          <a href={socialLinkLi}>
+          <a href={socialLinkLi} target='_blank'>
               <img className='slider-img' src={iconLinkLi} alt={altLi}/>
           </a>
       </li>
