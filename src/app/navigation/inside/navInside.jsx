@@ -20,6 +20,7 @@ import control from '../../../assets/icons/nav_icons/control.svg'
 import {StartHome} from '../../routes/starthome'
 import {Home} from '../../routes/home'
 import {Control} from '../../routes/control'
+import {Robot} from '../../routes/robot'
 
 export function Inside(){
  return (
@@ -70,11 +71,7 @@ export function About () {
     <h1>SOY ABOUT</h1>
   )
 }
-export function Robot () {
-  return (
-    <h1>SOY EL ROBOT</h1>
-  )
-}
+
 export function Config () {
   return (
     <h1>SOY LA CONFIGURACIÓN</h1>

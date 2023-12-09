@@ -1,11 +1,7 @@
 /*TODO:  Control Component  */
 /*TODO: --------------------  */
 
-@font-face {
-    font-family: "LetraFacha";
-    src: url("/src/assets/fonts/butterscotch/Butterscotch.otf"),
-    url("/src/assets/fonts/butterscotch/Butterscotch.ttf");
-  }
+
 
 :root {
     --pads-color:#000000;
@@ -133,6 +129,6 @@
 /*? Test UI*/ 
 
 .side-speed-bar .speed-elements-in:hover {
-    border-bottom: solid 6px rgba(218, 13, 13, 0.9);
+    border-bottom: solid 6px var( --red-contrast-color);
     transform: translateY(8px ) translateX(2px);
 }

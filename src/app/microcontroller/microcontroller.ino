@@ -91,6 +91,7 @@ void loop() {
 
     }
 
+
      else if(texto == '3'){
       Serial.println("Soy la habitación");
       webSocketClient.sendData("Bedroom");
@@ -121,3 +122,4 @@ void loop() {
   delay(3000);
   
 }
+
