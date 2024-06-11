@@ -1,20 +1,20 @@
 import '../../assets/styles/routes_styles/general.routes.styles.css'
 import '../../assets/styles/routes_styles/robot.css'
 
-
+import AldoRobot from '/icons/nav_icons/robot.svg'
 
 
 export function Robot(){
   return(
     <div className="banner-container">
       <Banner
-        bannerIcon="/icons/nav_icons/robot.svg"
+        bannerIcon={AldoRobot}
         bannerAlt="Name"
         robotName="Aldo"
       />
 
       <Banner
-        bannerIcon="/icons/nav_icons/robot.svg"
+        bannerIcon={AldoRobot}
         bannerAlt="Name"
         robotName="Jamón"
       />
@@ -22,6 +22,7 @@ export function Robot(){
     </div>
   )
 } 
+
 
 function Banner({bannerIcon,bannerAlt,robotName}){
   return(

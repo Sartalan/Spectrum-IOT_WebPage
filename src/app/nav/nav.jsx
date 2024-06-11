@@ -2,7 +2,8 @@ import {Slider} from './slider'
 import {Inside} from './navInside'
 import { useState } from "react"
 
-
+import MenuIcon from '/icons/social_icons/menu.svg'
+import IOTIcon from '/top.png'
 
 import '../../assets/styles/nav.css';
 
@@ -32,6 +33,7 @@ export function Nav () {
       <nav className='nav'>
 
        <Top 
+        Icon={IOTIcon}
         spanText="Internet of Things"
         />
 
@@ -43,7 +45,7 @@ export function Nav () {
 
     <div className="slider-nav">
         <div onClick={touch}>
-            <img  className={arrowState} src="/icons/social_icons/menu.svg" alt="" />
+            <img  className={arrowState} src={MenuIcon} alt="" />
         </div>
 
         <Slider/> 
@@ -54,12 +56,12 @@ export function Nav () {
   )
 }
 
-export function Top({spanText}){
+export function Top({spanText, Icon}){
   return (
     
       <div className="top-navigation">
         <div className="box">
-          <img className='top-icon' src="/top.png" alt="" />
+          <img className='top-icon' src={Icon} alt="" />
           <span className='iot-text'>{spanText}</span>
         </div>
       </div>
